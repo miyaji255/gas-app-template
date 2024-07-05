@@ -1,0 +1,22 @@
+{
+  "name": "gas-app-template",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx esbuild.ts build",
+    "push": "pnpm run build && clasp push -f",
+    "watch:build": "tsx esbuild.ts watch",
+    "watch:push": "clasp push -f -w"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.83",
+    "@types/node": "^20.14.9",
+    "clasp": "^1.0.0",
+    "esbuild": "^0.23.0",
+    "esbuild-plugin-gas-generator": "^1.0.0",
+    "rimraf": "^5.0.7",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
